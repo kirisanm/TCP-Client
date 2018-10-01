@@ -53,7 +53,7 @@ void main() {
 
 		if (userInput.size() > 0) {
 			// Send the text
-			int sendResult = send(sock, userInput.c_str(), userInput.size() + 1, 0);
+			int sendResult = send(sock, userInput.c_str(), userInput.size(), 0);
 			if (sendResult != SOCKET_ERROR) {
 				// Wait for response
 				ZeroMemory(buf, 4096);
